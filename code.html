@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Well Soon Shilaaa</title>
+    <style>
+        /* Background Styling */
+        body {
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+            color: #333;
+        }
+
+        /* Valentine Card */
+        .card {
+            width: 400px;
+            height: 250px;
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+
+        /* Card Folding Effect */
+        .card-inner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transform: rotateY(0);
+            transition: transform 1.5s ease-in-out;
+        }
+
+        /* Card Front */
+        .card-front {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            backface-visibility: hidden;
+            position: absolute;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .card-front h1 {
+            font-size: 26px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .card-front .heart {
+            font-size: 50px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Card Inside */
+        .card-back {
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            border-radius: 12px;
+        }
+
+        .card-back h2 {
+            color: #d63384;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .card-back p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Flip Card on Hover */
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* 🦋 Butterfly Animation */
+        .butterfly {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/8/84/Butterfly_icon.svg') no-repeat center;
+            background-size: cover;
+            animation: fly 6s infinite ease-in-out;
+        }
+
+        .butterfly:nth-child(1) {
+            top: 10%;
+            left: -50px;
+            animation-delay: 0s;
+        }
+
+        .butterfly:nth-child(2) {
+            top: 30%;
+            left: -60px;
+            animation-delay: 2s;
+        }
+
+        .butterfly:nth-child(3) {
+            top: 50%;
+            left: -70px;
+            animation-delay: 4s;
+        }
+
+        @keyframes fly {
+            0% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+            50% { transform: translateX(500px) translateY(-30px) rotate(10deg); }
+            100% { transform: translateX(1000px) translateY(0px) rotate(0deg); }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Valentine Card -->
+    <div class="card">
+        <div class="card-inner">
+            <!-- Front Cover -->
+            <div class="card-front">
+                <h1>Get Well Soon, Shilaaa 💖</h1>
+                <div class="heart">❤️</div>
+                <p>(Hover to open)</p>
+            </div>
+
+            <!-- Inside Message -->
+            <div class="card-back">
+                <h2>For My Love 💌</h2>
+                <p>Get well soon, <strong>yayangg</strong>. Banyakkan doa tau, doa bulan Ramadhan ni mustajab.</p>
+                <p>Jaga makan, jangan sampai lambat baik.</p>
+                <p>Final exam dah dekat, kasi <strong>4 flat</strong> tau yayang!</p>
+                <p><strong>I LOVE YOU ❤️</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🦋 Animated Butterflies -->
+    <div class="butterfly"></div>
+    <div class="butterfly"></div>
+    <div class="butterfly"></div>
+
+</body>
+</html>
